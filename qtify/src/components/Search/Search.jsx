@@ -11,7 +11,7 @@ const Search = () => {
 
       <InputGroup className="mb-3">
         <Form.Control
-          placeholder="search for an album of your choice"
+          placeholder="search a album"
           aria-label="Recipient's username"
           aria-describedby="basic-addon2"
           id = "search-bar"
