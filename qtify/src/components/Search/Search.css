@@ -1,0 +1,21 @@
+/* #search-bar{
+  width: 568px;
+} */
+
+#button-addon2{
+  width: 68px;
+  background-color: white;
+  height: 46px;
+
+}
+#button-addon2:hover{
+  color: #34C94B;
+
+}
+
+#search-bar{
+  width: 500px;
+  /* border: none; */
+  border-color: black;
+  height: 46px;
+}

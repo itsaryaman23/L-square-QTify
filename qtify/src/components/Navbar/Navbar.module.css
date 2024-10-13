@@ -1,0 +1,13 @@
+.navbar{
+  background-color: #34C94B;
+  height: 74px;
+}
+
+.navContainer{
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+}
