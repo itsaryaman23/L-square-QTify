@@ -16,6 +16,10 @@
 #search-bar{
   width: 500px;
   /* border: none; */
-  border-color: black;
+  border-color: rgb(110,117,124);
   height: 46px;
+}
+
+.search{
+margin-top: 2.5%;
 }

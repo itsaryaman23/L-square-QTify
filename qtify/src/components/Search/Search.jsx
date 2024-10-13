@@ -7,16 +7,20 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 
 const Search = () => {
   return (
-      <InputGroup className="mb-3"  id="search-bar">
+    <div className="search">
+
+      <InputGroup className="mb-3">
         <Form.Control
           placeholder="Search for an album of your choice"
           aria-label="Recipient's username"
           aria-describedby="basic-addon2"
-        />
+          id = "search-bar"
+          />
         <Button variant="outline-secondary" id="button-addon2">
           <SearchOutlinedIcon />
         </Button>
       </InputGroup>
+          </div>
   );
 }
 
