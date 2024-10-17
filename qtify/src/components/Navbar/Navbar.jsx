@@ -3,7 +3,7 @@ import styles from "./Navbar.module.css";
 import Logo from "../Logo/Logo";
 import Search from "../Search/Search";
 import FeedbackButton from "../FeedbackButton/FeedbackButton";
-import Hero from "../Hero/Hero";
+// import Hero from "../Hero/Hero";
 import Feedback from '../Feedback/Feedback'
 
 const Navbar = () => {
@@ -30,7 +30,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <Hero />
+      {/* <Hero /> */}
       {
         feedDisplay &&
         <Feedback handleCross = {handleClick}/>

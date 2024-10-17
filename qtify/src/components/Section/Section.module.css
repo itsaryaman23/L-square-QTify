@@ -1,0 +1,27 @@
+.heading{
+    color: white;
+  text-align: left;
+  padding-left: 1.5%;
+}
+.body{
+    height: auto;
+    width: 100vw;
+    background-color: #121212;
+    padding: 2% 1%;
+}
+
+.textContainer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.collapse{
+    color: #34C94B;
+    cursor: pointer;
+    text-decoration: none;
+    padding-right: 1.5%;
+}
