@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Mycard from '../Mycard/Mycard';
 import style from './Album.module.css';
 
-const axios = require('axios');
+// const axios = require('axios');
 
 const Album = ({url}) => {
 
