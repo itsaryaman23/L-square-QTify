@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Hero from "./components/Hero/Hero";
 import Section from "./components/Section/Section";
 import Album from "./components/Album/Album";
-import AlbumScroll from './components/AlbumScroll/AlbumScroll';
+// import AlbumScroll from './components/AlbumScroll/AlbumScroll';
 import Divider from './components/Divider/Divider';
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
       <Section title={"New Albums"}>
         <Album url ={topUrl}/>
       </Section>
-      <AlbumScroll />
+      {/* <AlbumScroll /> */}
     </div>
   );
 }
