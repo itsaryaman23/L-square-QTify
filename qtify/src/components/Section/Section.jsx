@@ -19,9 +19,13 @@ const Section = (props) => {
       <div className={style.body}>
         <div className={style.textContainer}>
           <h5 class={style.heading}>{props.title}</h5>
-          <a className={style.collapse} onClick={handleClick}>
-            {collapse}
-          </a>
+          {
+            props.collapse &&
+            (<a className={style.collapse} onClick={handleClick}>
+              {collapse}
+            </a>)
+          }
+          
         </div>
         <div>
           {/* <Album /> */}

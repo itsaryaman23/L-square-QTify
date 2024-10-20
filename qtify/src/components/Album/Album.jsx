@@ -1,41 +1,56 @@
-import React, {useState, useEffect} from 'react';
-import Mycard from '../Mycard/Mycard';
-import style from './Album.module.css';
+import React, { useState, useEffect } from "react";
+import Mycard from "../Mycard/Mycard";
+import style from "./Album.module.css";
 
-// const axios = require('axios');
 
-const Album = ({url}) => {
+const Album = ({ url, setGenre }) => {
+  const [data, setData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
 
-    const [alb, setAlb] = useState([]);
+  useEffect(() => {
+     fetchData();
+    // filterSongs(setGenre);
+  }, []);
+  useEffect(()=>{
+    filterSongs(setGenre);
+  },[setGenre]);
 
-    useEffect(()=>{
-        testFunc();
-    },[])
+  const fetchData = async () => {
+    const res = await fetch(url);
+    let d = await res.json();
+    setData(d);
+    setFilteredData(d);
+  };
 
-    const testFunc = async () => {
-        const res = await fetch(url);
-        const data = await res.json();
-        // return data;
-        // console.log(data);
-        setAlb(data);
+
+  const filterSongs = (genre) => {
+    if (genre !== "ALL" && genre) {
+    let fData = data.filter((m)=>{
+        return (m.genre.label.toUpperCase()==genre)
+    })
+      setFilteredData(fData);
     }
-    console.log("fetched data",alb);
-    return (
-        <div className={style.body}>
-        {/* <div className={style.textContainer}>
-          <h5 class={style.heading}>Top Albums</h5>
-          <a className={style.collapse}>Collapse</a>
-        </div> */}
-        <div class = {style.alb}>
-        {/* <Mycard name={"Dummy"} follow={100}/> */}
-        {
-            alb.map((m)=>{
-                return <Mycard name={m.title} follow={m.follows} key={m.id} img={m.image}/>
-            })
-        }
-        </div>
+    else
+    setFilteredData(data);
+  };
+
+  return (
+    <div className={style.body}>
+      <div class={style.alb}>
+        {filteredData.map((m) => {
+          return (
+            <Mycard
+              name={m.title}
+              follow={m.follows ? m.follows : m.likes}
+              isFollow={m.follows ? true : false}
+              key={m.id}
+              img={m.image}
+            />
+          );
+        })}
       </div>
-    );
-}
+    </div>
+  );
+};
 
 export default Album;

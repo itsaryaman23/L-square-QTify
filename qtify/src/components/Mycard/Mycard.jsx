@@ -6,10 +6,16 @@ import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import style from './Mycard.module.css';
 
-const Mycard = ({name, follow, img}) => {
-//   let albumName = "Dummy Name";
-//   let follow = 100;
-  let follower = `${follow} Follows`;
+const Mycard = ({name, follow, img, isFollow}) => {
+let follower;
+if(isFollow)
+{
+  follower = `${follow} Follows`;
+}
+else
+{
+  follower = `${follow} Likes`;
+}
     return (
         <>
         <div className = {style.card} >
@@ -19,7 +25,6 @@ const Mycard = ({name, follow, img}) => {
           <div className = {style.content}>
             <Chip id={style.chip} label= {follower} />
           </div>
-
         <p className = {style.albumName}>{name}</p>
         </div>
         </>
