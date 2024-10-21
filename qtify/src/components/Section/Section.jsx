@@ -4,16 +4,22 @@ import Album from "../Album/Album";
 
 const Section = (props) => {
 
-    const [collapse, setCollapse] = useState("Collapse");
+    const [collapse, setCollapse] = useState("Show more");
 
     const handleClick = () => {
         if(collapse == 'Collapse')
-            setCollapse('Show more');
+        {
+          props.handleClick(false);
+          setCollapse('Show more');
+        }
         else
-            setCollapse('Collapse');
+        {
+          props.handleClick(true);
+          setCollapse('Collapse');
+        }
     }
 
-  console.log(props.children);
+
   return (
     <>
       <div className={style.body}>
@@ -25,10 +31,8 @@ const Section = (props) => {
               {collapse}
             </a>)
           }
-          
         </div>
         <div>
-          {/* <Album /> */}
           {props.children}
         </div>
       </div>

@@ -40,6 +40,12 @@
   font-weight: 400;
   font-style: normal;
   margin-top: 5%;
+
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
 }
 
 .img{

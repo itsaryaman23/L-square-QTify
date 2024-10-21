@@ -50,8 +50,8 @@ export default function BasicTabs(props) {
   }
 
   return (
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs  value={value} onChange={handleChange} aria-label="basic tabs example" >
+      <Box sx={{ borderBottom: 1, borderColor: 'divider' , margin: "0.5rem 1.5rem"}}>
+        <Tabs  value={value} onChange={handleChange} aria-label="basic tabs example" className={style.tab} >
           <Tab  label="All" {...a11yProps(0)} onClick={handleClick}/>
           <Tab  label="Rock" {...a11yProps(1)} onClick={handleClick}/>
           <Tab  label="Pop" {...a11yProps(3)} onClick={handleClick}/>
