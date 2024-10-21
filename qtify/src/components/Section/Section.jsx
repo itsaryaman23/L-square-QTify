@@ -4,13 +4,13 @@ import Album from "../Album/Album";
 
 const Section = (props) => {
 
-    const [collapse, setCollapse] = useState("Show more");
+    const [collapse, setCollapse] = useState("show all");
 
     const handleClick = () => {
         if(collapse == 'Collapse')
         {
           props.handleClick(false);
-          setCollapse('Show more');
+          setCollapse('show all');
         }
         else
         {
